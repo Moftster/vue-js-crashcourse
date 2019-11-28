@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Header />
     <AddToDo v-on:add-todo="addToDo"/>
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
   </div>
@@ -8,7 +7,6 @@
 
 <script>
 
-import Header from '../components/layouts/header';
 import Todos from '../components/Todos';
 import AddToDo from '../components/AddToDo';
 import axios from 'axios';
@@ -16,7 +14,6 @@ import axios from 'axios';
 export default {
   name: 'Home',
   components: {
-    Header,
     Todos,
     AddToDo
   },
@@ -65,7 +62,7 @@ export default {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
-  padding: 10%;
+  /* padding: 10%; */
 }
 
 .btn {
